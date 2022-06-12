@@ -1,1 +1,11 @@
+/* COLORES */
+$black: pink;
+$navbar-light-color:                rgba($black, .55);
+$navbar-light-hover-color:          rgba($black, .7);
+$navbar-light-active-color:         rgba($black, .9);
+$navbar-light-disabled-color:       rgba($black, .3);
+
+@import "../bootstrap/scss/bootstrap";
+
+
 @import "./components/nav";
