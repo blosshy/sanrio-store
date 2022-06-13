@@ -4,6 +4,7 @@
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
     }
 
 .navbar-toggler {
@@ -44,6 +45,13 @@
     --bs-btn-disabled-color: pink;
     --bs-btn-disabled-bg: transparent;
     --bs-gradient: none;
+}
+
+@media screen and (min-width:0px) and (max-width:576px) {
+    .navbar-toggler{
+        margin:1rem;
+        margin-bottom: 2rem;
+    }
 }
 
 /* SEARCH BAR */

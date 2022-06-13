@@ -8349,7 +8349,8 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  position: fixed; }
 
 .navbar-toggler {
   --bs-navbar-toggler-border-color: white;
@@ -8383,6 +8384,11 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: pink;
   --bs-btn-disabled-bg: transparent;
   --bs-gradient: none; }
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+  .navbar-toggler {
+    margin: 1rem;
+    margin-bottom: 2rem; } }
 
 /* SEARCH BAR */
 .me-2 {
