@@ -8349,8 +8349,7 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
-  justify-content: space-around;
-  position: fixed; }
+  justify-content: space-around; }
 
 .navbar-toggler {
   --bs-navbar-toggler-border-color: white;
