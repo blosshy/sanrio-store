@@ -8365,13 +8365,16 @@ textarea.form-control-lg {
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
   .navbar-toggler {
-    margin: 1rem;
-    margin-bottom: 2rem; } }
+    margin: 2rem; }
+  .contenedor-searchbar {
+    padding: 5px; } }
 
 @media screen and (min-width: 434px) and (max-width: 531px) {
   .navbar-toggler {
     margin-left: 100%;
-    margin-right: 100%; } }
+    margin-right: 100%; }
+  .contenedor-searchbar {
+    padding: 5px; } }
 
 /* BOTON BUSCAR */
 .borde-btn {
@@ -8504,8 +8507,8 @@ textarea.form-control-lg {
     height: 25rem;
     width: 25rem; } }
 
-.logo-back {
-  background-image: url(../../images/fondo1.jpg); }
+.fondo {
+  background-image: url(../../images/fondo.jpg); }
 
 .sub-heading {
   color: #3d2615;
@@ -8521,4 +8524,5 @@ textarea.form-control-lg {
 /* ESTILOS DEL CONTAINER */
 .padding-0 {
   padding-right: 0 !important;
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+  overflow: hidden; }

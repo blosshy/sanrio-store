@@ -24,8 +24,10 @@
 
 @media screen and (min-width:0px) and (max-width:576px) {
     .navbar-toggler {
-        margin: 1rem;
-        margin-bottom: 2rem;
+        margin: 2rem;
+    }
+    .contenedor-searchbar{
+        padding: 5px;
     }
 }
 
@@ -33,6 +35,9 @@
     .navbar-toggler {
         margin-left: 100%;
         margin-right: 100%;
+    }
+    .contenedor-searchbar{
+        padding: 5px;
     }
 }
 
