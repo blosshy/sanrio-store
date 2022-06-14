@@ -26,8 +26,10 @@
     }
 }
 
-.fondo {
-    background-image: url(../../images/fondo.jpg);
+.fondo{
+    background-image: url("../images/fondo.jpg");
+    background-size: cover;
+    z-index: 10;
 }
 
 .sub-heading{
