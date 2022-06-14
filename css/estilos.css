@@ -8345,12 +8345,16 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /* NAVBAR ESTILOS */
-.navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+.navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
-  justify-content: space-around;
-  position: fixed; }
+  justify-content: space-around; }
 
 .navbar-toggler {
   --bs-navbar-toggler-border-color: white;
@@ -8442,7 +8446,8 @@ textarea.form-control-lg {
 .texto-link {
   margin-left: 3rem;
   text-decoration: none;
-  color: white; }
+  color: white;
+  padding-bottom: 10px; }
   .texto-link:hover {
     color: #eb3ed4; }
 
@@ -8451,3 +8456,69 @@ textarea.form-control-lg {
     margin-left: 3px; }
   .texto-link {
     margin-left: 2.6rem; } }
+
+/* ESTILOS DE LINKS */
+.links-container {
+  display: flex;
+  padding: 10px 10vw;
+  justify-content: center;
+  list-style-type: none;
+  border-top: 1px solid white;
+  background-color: pink;
+  margin-bottom: 0; }
+
+.link {
+  text-transform: capitalize;
+  font-size: 21px;
+  padding: 0 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+  transition: .5s; }
+  .link:hover {
+    opacity: 1;
+    color: white; }
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+  .link {
+    font-size: 1rem; } }
+
+/* ESTILOS SECCION LOGO */
+.logo {
+  display: block;
+  margin-bottom: 2rem; }
+
+@media screen and (min-width: 366px) and (max-width: 800px) {
+  .logo {
+    height: 15rem;
+    width: 15rem; } }
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .logo {
+    height: 20rem;
+    width: 20rem; } }
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    height: 25rem;
+    width: 25rem; } }
+
+.logo-back {
+  background-image: url(../../images/hero-section.jpg); }
+
+.sub-heading {
+  color: #3d2615;
+  font-size: 2.5rem;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-bottom: 3rem; }
+
+@media screen and (min-width: 0px) and (max-width: 1099px) {
+  .sub-heading {
+    font-size: 1.5rem; } }
+
+/* ESTILOS DEL CONTAINER */
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0; }
