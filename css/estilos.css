@@ -8505,7 +8505,7 @@ textarea.form-control-lg {
     width: 25rem; } }
 
 .logo-back {
-  background-image: url(../../images/hero-section.jpg); }
+  background-image: url(../../images/fondo1.jpg); }
 
 .sub-heading {
   color: #3d2615;
@@ -8520,5 +8520,5 @@ textarea.form-control-lg {
 
 /* ESTILOS DEL CONTAINER */
 .padding-0 {
-  padding-right: 0;
-  padding-left: 0; }
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
