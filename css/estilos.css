@@ -8380,6 +8380,121 @@ textarea.form-control-lg {
   .sub-heading {
     font-size: 1.5rem; } }
 
+/* ESTILOS BANNER KUROMI */
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+  .banner {
+    display: none; }
+  .bannermobile {
+    display: unset; } }
+
+@media screen and (min-width: 1201px) {
+  .banner {
+    display: unset; }
+  .bannermobile {
+    display: none; } }
+
+.bannermobile .foto-index-mobile {
+  margin: 1rem;
+  border: 0.5rem solid white;
+  border-radius: 10px; }
+
+.bannermobile .banner-new {
+  padding: 0;
+  padding-top: 0.5rem; }
+
+.bannermobile .kuromi-titulo, .bannermobile .kuromi-titulo2 {
+  padding: 0; }
+
+.bannermobile .kuromi-titulo2 {
+  padding: 0;
+  text-align: center;
+  margin: 0; }
+
+.bannermobile .new-products {
+  padding: 0;
+  padding-top: 15px; }
+
+.bannermobile .boton-nuevosp {
+  margin: 0;
+  margin-top: 15px;
+  text-align: center; }
+
+@media screen and (min-width: 0px) and (max-width: 353px) {
+  .foto-index-mobile {
+    height: 200px;
+    width: 200px; } }
+
+@media screen and (min-width: 353px) and (max-width: 470px) {
+  .foto-index-mobile {
+    height: 300px;
+    width: 300px; } }
+
+.background-mobile {
+  background-color: lightpink; }
+
+/* ESTILOS NO MOBILE  */
+.banner {
+  text-decoration: none;
+  color: black; }
+
+.bannerkuromi {
+  width: 1200px;
+  height: 600px;
+  background-image: url("../images/bannerkuromi.jpg"); }
+
+.banner-new {
+  font-family: 'Comfortaa', cursive;
+  padding: 6rem;
+  padding-right: 9rem;
+  padding-bottom: 1rem;
+  font-weight: 500; }
+
+.new-products {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 500;
+  text-align: center;
+  padding-right: 1rem;
+  padding-top: 1rem; }
+
+.kuromi-titulo, .kuromi-titulo2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 3rem;
+  padding-right: 5rem;
+  text-align: center; }
+
+.kuromi-titulo2 {
+  padding-right: 10rem; }
+
+.flecha-n {
+  display: none; }
+
+.flecha-b {
+  display: unset; }
+
+.boton-nuevosp {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #fc9bf7;
+  border: 1px solid white;
+  margin-top: 3rem;
+  margin-right: 9rem;
+  cursor: pointer; }
+  .boton-nuevosp:hover {
+    background-color: white;
+    border: 1px solid black; }
+    .boton-nuevosp:hover .flecha-b {
+      display: none; }
+    .boton-nuevosp:hover .flecha-n {
+      display: unset; }
+  .boton-nuevosp:hover a {
+    color: black; }
+  .boton-nuevosp a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400; }
+
 /* NAVBAR ESTILOS */
 .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl,
 .navbar > .container-sm,
@@ -8528,3 +8643,6 @@ textarea.form-control-lg {
   padding-right: 0 !important;
   padding-left: 0 !important;
   overflow: hidden; }
+
+.margin-0 {
+  margin-top: 0 !important; }

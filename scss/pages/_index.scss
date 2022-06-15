@@ -6,42 +6,191 @@
 }
 
 @media screen and (min-width:366px) and (max-width:800px) {
-    .logo{
+    .logo {
         height: 15rem;
         width: 15rem;
     }
 }
 
 @media screen and (min-width:800px) and (max-width:1200px) {
-    .logo{
+    .logo {
         height: 20rem;
         width: 20rem;
     }
 }
 
-@media screen and (min-width:1200px){
-    .logo{
+@media screen and (min-width:1200px) {
+    .logo {
         height: 25rem;
         width: 25rem;
     }
 }
 
-.fondo{
+.fondo {
     background-image: url("../images/fondo.jpg");
     background-size: cover;
     z-index: 10;
 }
 
-.sub-heading{
+.sub-heading {
     color: rgb(61, 38, 21);
     font-size: 2.5rem;
-    font-family:'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
 }
 
 @media screen and (min-width:0px) and (max-width:1099px) {
-    .sub-heading{
+    .sub-heading {
         font-size: 1.5rem
+    }
+}
+
+/* ESTILOS BANNER KUROMI */
+
+@media screen and (min-width:0px) and (max-width:1200px) {
+    .banner{
+        display: none;
+    }
+    .bannermobile{
+        display: unset;
+    }
+}
+
+@media screen and (min-width:1201px){
+    .banner{
+        display: unset;
+    }
+    .bannermobile{
+        display: none;
+    }
+}
+
+.bannermobile{
+    .foto-index-mobile{
+        margin: 1rem;
+        border: 0.5rem solid white;
+        border-radius: 10px;
+    }
+    .banner-new{
+        padding: 0;
+        padding-top: 0.5rem;
+    }
+    .kuromi-titulo{
+        padding: 0;
+    }
+    .kuromi-titulo2{
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+    .new-products{
+        padding: 0;
+        padding-top: 15px;
+    }
+    .boton-nuevosp{
+        margin: 0;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:353px) {
+    .foto-index-mobile{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:353px) and (max-width:470px) {
+    .foto-index-mobile{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.background-mobile{
+    background-color: lightpink;
+}
+
+/* ESTILOS NO MOBILE  */
+
+.banner {
+    text-decoration: none;
+    color: black;
+}
+
+.bannerkuromi {
+    width: 1200px;
+    height: 600px;
+    background-image: url("../images/bannerkuromi.jpg");
+}
+
+.banner-new {
+    font-family: 'Comfortaa', cursive;
+    padding: 6rem;
+    padding-right: 9rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+
+.new-products {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    text-align: center;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.kuromi-titulo {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.kuromi-titulo2 {
+    @extend .kuromi-titulo;
+    padding-right: 10rem;
+}
+
+.flecha-n{
+    display:none;
+}
+
+.flecha-b{
+    display: unset;
+}
+
+.boton-nuevosp {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgb(252, 155, 247);
+    border: 1px solid white;
+    margin-top: 3rem;
+    margin-right: 9rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        border: 1px solid black;
+        .flecha-b{
+            display: none;
+        }
+        .flecha-n{
+            display: unset;
+        }
+    }
+
+    &:hover a {
+        color: black;
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
     }
 }
