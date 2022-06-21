@@ -11,11 +11,22 @@
     justify-content: space-around;
 }
 
+.navbar {
+    --bs-navbar-color: rgb(255, 255, 255);
+    --bs-navbar-hover-color: rgb(255 255 255 / 70%);
+    --bs-navbar-disabled-color: #f8f9fa;
+    --bs-navbar-active-color: rgb(255 255 255 / 90%);
+    --bs-navbar-brand-color: #f8f9fa;
+    --bs-navbar-brand-hover-color: #f8f9fa;
+}
 
 .navbar-toggler {
     --bs-navbar-toggler-border-color: white;
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+}
 
+.navbar-toggler-icon {
+    background-image: url(../../images/toggle-bs.png);
 }
 
 .nav-fondo {
@@ -26,7 +37,8 @@
     .navbar-toggler {
         margin: 2rem;
     }
-    .contenedor-searchbar{
+
+    .contenedor-searchbar {
         padding: 5px;
     }
 }
@@ -36,7 +48,8 @@
         margin-left: 100%;
         margin-right: 100%;
     }
-    .contenedor-searchbar{
+
+    .contenedor-searchbar {
         padding: 5px;
     }
 }
@@ -179,8 +192,7 @@
 }
 
 @media screen and (min-width:0px) and (max-width:576px) {
-    .link{
+    .link {
         font-size: 1rem;
     }
 }
-

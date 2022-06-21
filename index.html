@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Oficial de Sanrio Argentina</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="./images/hellokitty.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,8 +52,8 @@
                 </nav>
                 <ul class="links-container">
                     <li class="link-item"><a href="#" class="link">Inicio</a></li>
-                    <li class="link-item"><a href="#" class="link">Mujer</a></li>
-                    <li class="link-item"><a href="#" class="link">Hombre</a></li>
+                    <li class="link-item"><a href="#" class="link">Ropa</a></li>
+                    <li class="link-item"><a href="#" class="link">Peluches</a></li>
                     <li class="link-item"><a href="#" class="link">Accesorios</a></li>
                 </ul>
             </div>
@@ -81,13 +82,15 @@
                                 mundo con nuestros últimos productos: <br> incluyendo una campera oversize, una tote
                                 supercute
                                 <br> y muchisímo más!</p>
-                            <div class="boton-nuevosp">
-                                <a href="#">Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
-                                        class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
-                                        class="flecha-n"></a>
-                            </div>                           
+                            <a href="#" class="boton-novedad">
+                                <div class="boton-nuevosp">
+                                    <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
+                                            class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
+                                            class="flecha-n"></span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="p-5"></div> <!-- BORRAR -->
+                        <div class="p-3"></div> <!-- BORRAR -->
                     </div>
                 </div>
             </div>
@@ -127,26 +130,130 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="boton-nuevosp mb-4">
-                                <a href="#">Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
-                                        class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
-                                        class="flecha-n"></a>
-                            </div>
+                            <a href="#" class="boton-novedad mb-4">
+                                <div class="boton-nuevosp">
+                                    <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
+                                            class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
+                                            class="flecha-n"></span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="p-2"></div> <!-- BORRAR -->
         </section>
-        </div>
 
-
-
+        <section class="container-fluid slider-contenedor">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 slider-titulo">
+                    <h2 class="mt-3">• Productos populares •</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper mt-3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide d-flex flex-column justify-content-center">
+                                    <div class="img-card-container">
+                                        <img src="./images/mymelody-newtop.jpg" alt="My Melody Crop"
+                                            class="img-fluid card-size-img img-before">
+                                        <img src="./images/mymelody-newtop-hover.jpg" alt="My Melody Crop"
+                                            class="img-fluid card-size-img img-after">
+                                    </div>
+                                    <p class="product-name mt-3">My Melody JapanLA Cropped Spirit Jersey</p>
+                                    <div class="pb-3">
+                                        <a href="#" class="links-boton">
+                                            <div class="boton-card">
+                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
+                                                    al carro</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column justify-content-center">
+                                    <div class="img-card-container">
+                                        <img src="./images/pompompurincrop1.jpg" alt="Pompompurin Crop"
+                                            class="img-fluid card-size-img img-before">
+                                        <img src="./images/pompompurincrop2.jpg" alt="Pompompurin Crop"
+                                            class="img-fluid card-size-img img-after">
+                                    </div>
+                                    <p class="product-name mt-3">Pompompurin JapanLA Cropped Spirit Jersey</p>
+                                    <div class="pb-3">
+                                        <a href="#" class="links-boton">
+                                            <div class="boton-card">
+                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
+                                                    al carro</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column justify-content-center">
+                                    <div class="img-card-container">
+                                        <img src="./images/cinnamorollcrop1.jpg" alt="Cinnamoroll Crop"
+                                            class="img-fluid card-size-img img-before">
+                                        <img src="./images/cinnamorollcrop2.jpg" alt="Cinnamoroll Crop"
+                                            class="img-fluid card-size-img img-after">
+                                    </div>
+                                    <p class="product-name mt-3">Cinnamoroll JapanLA Cropped Spirit Jersey</p>
+                                    <div class="pb-3">
+                                        <a href="#" class="links-boton">
+                                            <div class="boton-card">
+                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
+                                                    al carro</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column justify-content-center">
+                                    <div class="img-card-container">
+                                        <img src="./images/kuromicrop1.jpg" alt="Kuromi Crop"
+                                            class="img-fluid card-size-img img-before">
+                                        <img src="./images/kuromicrop2.jpg" alt="Kuromi Crop"
+                                            class="img-fluid card-size-img img-after">
+                                    </div>
+                                    <p class="product-name mt-3">Kuromi JapanLA Cropped Spirit Jersey</p>
+                                    <div class="pb-3">
+                                        <a href="#" class="links-boton">
+                                            <div class="boton-card">
+                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
+                                                    al carro</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5"></div> <!-- BORRAR -->
+        </section>
 
     </main>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
