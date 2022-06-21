@@ -251,6 +251,22 @@
   display: block;
   object-fit: cover; }
 
+/* SUB-INDICE ESTILOS */
+.sub-indice {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 500;
+  margin-top: 10px;
+  width: fit-content; }
+  .sub-indice:hover {
+    color: #eb23da; }
+
+.sub-indice-img:hover {
+  filter: brightness(85%); }
+
 /* NAVBAR ESTILOS */
 .navbar > .container-fluid,
 .navbar > .container-sm,
