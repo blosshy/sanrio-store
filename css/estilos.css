@@ -505,6 +505,6 @@
     align-items: center; } }
 
 .footer-back {
-  background-image: url(../../images/footer-fondo.webp);
+  background-image: url(../images/footer-fondo.webp);
   padding: 5rem;
   margin-top: 1rem; }
