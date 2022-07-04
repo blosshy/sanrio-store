@@ -92,6 +92,7 @@
         margin: 0;
         margin-top: 15px;
         text-align: center;
+        text-decoration: none;
     }
 }
 
@@ -169,26 +170,20 @@
     padding-right: 3rem;
     background-color: rgb(208, 160, 223);
     border: 1px solid white;
+    color: white;
     margin-top: 3rem;
     margin-right: 9rem;
 
     &:hover {
         background-color: white;
         border: 1px solid black;
+        color: black;
         .flecha-b{
             display: none;
         }
         .flecha-n{
             display: unset;
         }
-    }
-}
-
-.boton-novedad{
-    text-decoration: none;
-    color: white;
-    &:hover{
-        color: black;
     }
 }
 

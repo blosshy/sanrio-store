@@ -1,0 +1,88 @@
+/* ESTILOS DE SECCION NEWS LETTER */
+
+.news-letter-icon{
+    height: 5rem;
+    width: 5rem;
+}
+
+.newsl-div-contacto{
+    background-color: lightpink;
+}
+
+.newsl-titulo{
+    font-size: 1rem;
+    font-family:'Comfortaa', cursive;
+    text-align: center;
+}
+
+.newsl-input{
+    display: block;
+    width: 20rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(141, 136, 136) !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px white solid;
+    appearance: none;
+    border-radius: 0;
+
+    &:focus {
+        color: #212529;
+        background-color: #fff;
+        border-color: #790c8362;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(252, 4, 169, 0.521);
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:415px) {
+    .newsl-input {
+        width: 13rem;
+    }
+}
+
+.boton-newsl{
+    border: 1px solid white;
+    background-color: rgb(245, 135, 153);
+    &:hover{
+        background-color: rgb(211, 113, 129);
+    }
+}
+
+/* ESTILOS DE LISTAS FOOTER */
+
+.icons-socialmedia{
+    width: 2rem;
+    height: 2rem;
+}
+
+.icons-list{
+    list-style: none;
+}
+
+.footer-titulo{
+    font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family:'Comfortaa', cursive;
+    text-align: center;
+
+    &:hover{
+        color: rgb(235, 35, 218);
+    }
+}
+
+.payment-icons{
+    width: 3rem;
+    height: 3rem;
+}

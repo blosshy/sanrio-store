@@ -82,13 +82,11 @@
                                 mundo con nuestros últimos productos: <br> incluyendo una campera oversize, una tote
                                 supercute
                                 <br> y muchisímo más!</p>
-                            <a href="#" class="boton-novedad">
-                                <div class="boton-nuevosp">
-                                    <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
-                                            class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
-                                            class="flecha-n"></span>
-                                </div>
-                            </a>
+                            <button class="boton-nuevosp" onclick="location.href='#'">
+                                <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
+                                        class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
+                                        class="flecha-n"></span>
+                            </button>
                         </div>
                         <div class="p-3"></div> <!-- BORRAR -->
                     </div>
@@ -129,15 +127,11 @@
                                     <br> y muchisímo más!</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <a href="#" class="boton-novedad mb-4">
-                                <div class="boton-nuevosp">
-                                    <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
-                                            class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
-                                            class="flecha-n"></span>
-                                </div>
-                            </a>
-                        </div>
+                        <button class="boton-nuevosp mb-4" onclick="location.href='#'">
+                            <span>Ver novedades <img src="./images/flechablanca.png" alt="Flecha derecha"
+                                    class="flecha-b"><img src="./images/flechanegra.svg" alt="Flecha derecha"
+                                    class="flecha-n"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -236,19 +230,92 @@
         <section class="container">
             <div class="row m-5">
                 <div class="col-md-4 p-3 d-flex justify-content-center flex-column align-items-center">
-                    <a href="#"><img src="./images/ropa.jpg" alt="" class="img-fluid sub-indice-img"></a>
+                    <a href="#"><img src="./images/ropa.jpg" alt="Sanrio ropa" class="img-fluid sub-indice-img"></a>
                     <a href="#" class="p-2 sub-indice">• Ropa •</a>
                 </div>
                 <div class="col-md-4 p-3 d-flex justify-content-center flex-column align-items-center">
-                    <a href="#"><img src="./images/accesorios.jpg" alt="" class="img-fluid sub-indice-img"></a>
+                    <a href="#"><img src="./images/accesorios.jpg" alt="Sanrio bolsos y accesorios"
+                            class="img-fluid sub-indice-img"></a>
                     <a href="#" class="p-2 sub-indice">•Accesorios•</a>
                 </div>
                 <div class="col-md-4 p-3 d-flex justify-content-center flex-column align-items-center">
-                    <a href="#"><img src="./images/peluches.jpg" alt="" class="img-fluid sub-indice-img"></a>
+                    <a href="#"><img src="./images/peluches.jpg" alt="Sanrio peluches"
+                            class="img-fluid sub-indice-img"></a>
                     <a href="#" class="p-2 sub-indice">• Peluches •</a>
                 </div>
             </div>
         </section>
+
+        <footer>
+            <section class="container-fluid newsl-div-contacto">
+                <div class="row m-2">
+                    <div class="col-md-12 d-flex align-items-center flex-column">
+                        <img src="./images/news-letter.svg" alt="Hello Kitty News Letter Icono"
+                            class="img-fluid news-letter-icon m-2">
+                        <h3 class="newsl-titulo p-1">¡Mantengamos el contacto!</h3>
+                        <h3 class="newsl-titulo p-1">Te avisaremos sobre nuestros últimos lanzamientos y ofertas
+                            especiales
+                            ♥</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="d-flex justify-content-center align-items-center mt-2">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">*Email</label>
+                            <div class="d-flex flex-row">
+                                <input type="email" class="newsl-input" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <button type="submit" class="ms-2 boton-newsl">Enviar</button>
+                            </div>
+                            <div id="emailHelp" class="form-text">Esta información jamás será compartida.</div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <div class="p-5"></div> <!-- BORRAR -->
+
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 mt-3">
+                        <ul class="icons-list d-flex flex-column align-items-center">
+                            <li class="footer-titulo"><h3>Tienda</h3></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Ropa</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Accesorios</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Peluches</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <ul class="icons-list d-flex flex-column align-items-center">
+                            <li class="footer-titulo"><h3 href="#">Sobre nosotros</h3></li>
+                            <li class="pb-1"><a href="#" class="footer-link">¿Quienes somos?</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Preguntas frecuentes</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Copyright y derechos</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Envios</a></li>
+                            <li class="pb-1"><a href="#" class="footer-link">Politicas de devolucion</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ">
+                            <ul class="d-flex flex-row justify-content-center icons-list mt-3 me-3">
+                            <li><a href="#"><img src="./images/whatsapp-icon.png" alt="Sanrio en Whatsapp" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#"><img src="./images/instagram-icon.png" alt="Sanrio en Instagram" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#"><img src="./images/facebook-icon.png" alt="Sanrio en Facebook" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#"><img src="./images/pinterest-icon.png" alt="Sanrio en Pinterest" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#"><img src="./images/tiktok-icon.png" alt="Sanrio en Tiktok" class="icons-socialmedia p-0 m-2"></a></li>
+                            </ul>
+                            <ul class="d-flex flex-row justify-content-center icons-list mt-3 me-3 mb-3">
+                                <li><img src="./images/mercadopago.png" alt="Sanrio en Whatsapp" class="payment-icons p-0 m-2"></li>
+                                <li><img src="./images/mastercard.png" alt="Sanrio en Instagram" class="payment-icons p-0 m-2"></li>
+                                <li><img src="./images/visa.png" alt="Sanrio en Facebook" class="payment-icons p-0 m-2"></li>
+                                <li><img src="./images/googlepay.jpg" alt="Sanrio en Pinterest" class="payment-icons p-0 m-2"></li>
+                                <li><img src="./images/applepay.png" alt="Sanrio en Tiktok" class="payment-icons p-0 m-2"></li>
+                                <li><img src="./images/amex.png" alt="Sanrio en Tiktok" class="payment-icons p-0 m-2"></li>
+                            </ul>
+                            <p class="text-center">© 2022 SANRIO CO., LTD. <b>Todos los derechos reservados.</b></p>
+                    </div>
+                </div>
+            </section>
+            <div class="p-5"></div> <!-- BORRAR -->
+        </footer>
 
     </main>
 
