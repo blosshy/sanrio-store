@@ -474,6 +474,8 @@
 .icons-socialmedia {
   width: 2rem;
   height: 2rem; }
+  .icons-socialmedia:hover {
+    transform: scale(1.4); }
 
 .icons-list {
   list-style: none; }
@@ -494,5 +496,15 @@
     color: #eb23da; }
 
 .payment-icons {
-  width: 3rem;
+  width: 4rem;
   height: 3rem; }
+
+@media screen and (min-width: 766px) and (max-width: 950px) {
+  .footer-list-mobile {
+    flex-direction: column !important;
+    align-items: center; } }
+
+.footer-back {
+  background-image: url(../../images/footer-fondo.webp);
+  padding: 5rem;
+  margin-top: 1rem; }
