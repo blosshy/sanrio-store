@@ -484,7 +484,11 @@
   font-size: 2rem;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  font-weight: bolder; }
+  font-weight: bolder;
+  color: #d8939e; }
+
+.pink {
+  color: #d8939e; }
 
 .footer-link {
   text-decoration: none;
