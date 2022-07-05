@@ -517,7 +517,8 @@
 
 .fondo-login {
   background-image: url(../images/login-fondo.png);
-  background-position: center; }
+  background-position: center;
+  background-color: #FFCCCB; }
 
 .login-titulo {
   color: #d36275;
@@ -555,10 +556,10 @@
   width: 4rem;
   height: 3rem; }
 
-.password-link {
+.password-link, .registro-link {
   text-decoration: none;
   color: #d36275; }
-  .password-link:hover {
+  .password-link:hover, .registro-link:hover {
     color: #8f8f8f; }
 
 .btn-login {
@@ -573,3 +574,20 @@
 
 .login-padding {
   padding-bottom: 20rem; }
+
+.registro-link {
+  font-weight: 700; }
+
+.fondo-registro {
+  background-image: url(../images/fondo-registro.jpg);
+  background-position: center;
+  background-color: #FBD4E7;
+  background-repeat: no-repeat;
+  padding-bottom: 15rem; }
+
+.form-edad {
+  width: 25rem; }
+
+@media screen and (min-width: 0px) and (max-width: 415px) {
+  .form-edad {
+    width: 15rem; } }

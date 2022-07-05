@@ -1,0 +1,17 @@
+.fondo-registro {
+    background-image: url(../images/fondo-registro.jpg);
+    background-position: center;
+    background-color: #FBD4E7;
+    background-repeat: no-repeat;
+    padding-bottom: 15rem;
+}
+
+.form-edad {
+    width: 25rem;
+}
+
+@media screen and (min-width:0px) and (max-width:415px) {
+    .form-edad {
+        width: 15rem;
+    }
+}

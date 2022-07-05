@@ -1,6 +1,7 @@
 .fondo-login{
     background-image: url(../images/login-fondo.png);
     background-position: center;
+    background-color: #FFCCCB;
 }
 
 .login-titulo{
@@ -39,10 +40,7 @@
 @media screen and (min-width:0px) and (max-width:415px) {
     .input-email {
         width: 15rem;
-    }
-
-    
-    
+    } 
 }
 
 .login-icons{
@@ -74,4 +72,9 @@
 
 .login-padding{
     padding-bottom: 20rem;
+}
+
+.registro-link{
+    @extend .password-link;
+    font-weight: 700;
 }
