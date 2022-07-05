@@ -66,7 +66,7 @@
     </header>
 
     <main>
-        <section class="container-fluid fondo-registro d-flex align-items-center flex-column">
+        <form class="container-fluid fondo-registro d-flex align-items-center flex-column" id="registro">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="mt-5 login-titulo"><img src="../images/login-icon2.png" alt="Hello Kitty Bow Logo"
@@ -77,36 +77,41 @@
             <div class="row mt-4">
                 <div class="col-md-12">
                     <label for="exampleInputnombre1" class="form-label form-texto">Ingresa tu nombre:</label>
-                    <input type="text" class="input-email form-texto" id="exampleInputnombre1"
-                        aria-describedby="emailHelp" placeholder="mi nombre es...">
+                    <input type="text" class="input-email form-texto" id="nombre" aria-describedby="emailHelp"
+                        placeholder="mi nombre es...">
+                    <span id="mensaje"></span>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-md-12">
                     <label for="exampleInputapellido1" class="form-label form-texto">Ingresa tu apellido:</label>
-                    <input type="text" class="input-email form-texto" id="exampleInputapellido1"
-                        aria-describedby="emailHelp" placeholder="mi apellido es...">
+                    <input type="text" class="input-email form-texto" id="apellido" aria-describedby="emailHelp"
+                        placeholder="mi apellido es...">
+                    <span id="mensaje-2"></span>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-md-12 d-flex flex-column justify-content-start align-items-start">
-                    <label for="exampleInputapellido1" class="form-label form-texto">Ingresa tu fecha de nacimiento:</label>
-                    <input type="date" id="start" name="fecha-de-nacimiento" value="2004-01-01" class="form-edad">
+                    <label for="exampleInputapellido1" class="form-label form-texto">Ingresa tu fecha de
+                        nacimiento:</label>
+                    <input type="date" id="edad" name="fecha-de-nacimiento" value="2004-01-01" class="form-edad">
+                    <span id="mensaje-3"></span>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-md-12">
                     <label for="exampleInputEmail1" class="form-label form-texto">Ingresa tu correo:</label>
-                    <input type="email" class="input-email form-texto" id="exampleInputEmail2"
-                        aria-describedby="emailHelp" placeholder="estoesunejemplo@gmail.com">
+                    <input type="email" class="input-email form-texto" id="email" aria-describedby="emailHelp"
+                        placeholder="estoesunejemplo@gmail.com">
+                    <span id="mensaje-4"></span>
                     <div id="emailHelp" class="form-text form-texto">No compartiremos tu email a terceros.</div>
                 </div>
             </div>
             <div class="row mt-4 mb-2">
                 <div class="col-md-12">
                     <label for="exampleInputPassword1" class="form-label form-texto m-0">Crea una contraseña:</label>
-                    <input type="password" class="input-email form-texto" id="exampleInputPassword1"
-                        placeholder="•••••••••••">
+                    <input type="password" class="input-email form-texto" id="password" placeholder="•••••••••••">
+                    <span id="mensaje-5"></span>
                     <div id="emailHelp" class="form-text form-texto m-0">Debe contener al menos un número.
                     </div>
                 </div>
@@ -117,7 +122,7 @@
                     <a href="login.html" class="registro-link mt-3">¿Ya estás registrado? Has click aquí.</a>
                 </div>
             </div>
-        </section>
+        </form>
     </main>
 
     <div class="p-2"></div> <!-- BORRAR -->
@@ -205,6 +210,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 
 </html>

@@ -575,9 +575,6 @@
 .login-padding {
   padding-bottom: 20rem; }
 
-.registro-link {
-  font-weight: 700; }
-
 .fondo-registro {
   background-image: url(../images/fondo-registro.jpg);
   background-position: center;
@@ -591,3 +588,14 @@
 @media screen and (min-width: 0px) and (max-width: 415px) {
   .form-edad {
     width: 15rem; } }
+
+.registro-link {
+  font-weight: 700; }
+
+.error {
+  font-style: italic;
+  color: red; }
+
+.valido {
+  font-style: italic;
+  color: green; }
