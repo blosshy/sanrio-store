@@ -123,7 +123,7 @@ inputEmail.addEventListener("blur",()=>{
 
 inputPassword.addEventListener("blur",()=>{
 
-    if ((inputPassword.value.length > 0) && (inputPassword.value.includes(0,1,2,3,4,5,6,7,8,9))){
+    if ((inputPassword.value.length > 0) && (inputPassword.value.match(/[0-9]/g))){
         let mensaje = document.getElementById("mensaje-5");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
