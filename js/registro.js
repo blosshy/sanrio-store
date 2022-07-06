@@ -51,7 +51,7 @@ inputNombre.addEventListener("blur",()=>{
     }else{
         let mensaje = document.getElementById("mensaje");
         mensaje.innerHTML = `
-            <p class="error m-0">No puedes dejar este campo vacio.</p>
+            <p class="error m-0">No puedes dejar este campo vacío.</p>
         `
     }
 });
@@ -68,7 +68,7 @@ inputApellido.addEventListener("blur",()=>{
     }else{
         let mensaje = document.getElementById("mensaje-2");
         mensaje.innerHTML = `
-            <p class="error m-0">No puedes dejar este campo vacio.</p>
+            <p class="error m-0">No puedes dejar este campo vacío.</p>
         `
     }
 });

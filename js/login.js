@@ -18,12 +18,29 @@ login.addEventListener("submit",(e)=>{
 
     if ((logEmail === cuenta[0].email) && (logPassword === cuenta[0].password)) {
         window.location.href='../index.html';
-        /* let nombreUsuario = getElementById("nombre-usuario");
+        /* let nombreUsuario = document.getElementById("nombre-usuario");
         nombreUsuario.innerHTML = `
-            ${cuenta[0].nombre};
+            ${cuenta[0].nombre}
         `  */
+    }else if ((logEmail !== cuenta[0].email) && (logPassword === cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
+    }else if ((logEmail === cuenta[0].email) && (logPassword !== cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
+    }else if ((logEmail !== cuenta[0].email) && (logPassword !== cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
     }
 });
+
+/* GET DE LOS INPUTS DEL LOGIN */
 
 const logEmail = document.getElementById("email-login");
 const logPassword = document.getElementById("password-login");
@@ -40,7 +57,7 @@ logEmail.addEventListener("blur",()=>{
     }else{
         let mensaje = document.getElementById("error-m");
         mensaje.innerHTML = `
-            <p class="error m-0">Tu email no es valido.</p>
+            <p class="error m-0">No puedes dejar este campo vacío.</p>
         `
     }
 });
