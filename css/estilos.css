@@ -556,10 +556,10 @@
   width: 4rem;
   height: 3rem; }
 
-.password-link, .registro-link {
+.password-link, .registro-link, .registro-exitoso-link {
   text-decoration: none;
   color: #d36275; }
-  .password-link:hover, .registro-link:hover {
+  .password-link:hover, .registro-link:hover, .registro-exitoso-link:hover {
     color: #8f8f8f; }
 
 .btn-login {
@@ -589,7 +589,7 @@
   .form-edad {
     width: 15rem; } }
 
-.registro-link {
+.registro-link, .registro-exitoso-link {
   font-weight: 700; }
 
 .error {
@@ -599,3 +599,33 @@
 .valido {
   font-style: italic;
   color: green; }
+
+/* ESTILOS MENSAJE DE REGISTRO EXITOSO */
+.msj-exitoso {
+  color: #d36275;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  padding-top: 1rem; }
+
+#form-container {
+  background-color: #FBD4E7; }
+
+.reg-exitoso-img {
+  padding: 3rem; }
+
+.registro-exitoso-link {
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  text-align: center; }
+
+@media screen and (min-width: 0px) and (max-width: 354px) {
+  .registro-exitoso-link {
+    font-size: 1rem; } }
+
+@media screen and (min-width: 354px) and (max-width: 437px) {
+  .registro-exitoso-link {
+    font-size: 1.2rem; } }
+
+@media screen and (min-width: 438px) and (max-width: 583px) {
+  .registro-exitoso-link {
+    font-size: 1.5rem; } }

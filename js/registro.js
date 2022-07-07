@@ -1,7 +1,12 @@
+function guardarLocalJs(clave, valor) {
+    localStorage.setItem(clave, valor);
+}
+
+
 /* GUARDAR INFO DE LOS INPUTS EN UN ARRAY */
 
-class Usuario{
-    constructor(nombre,apellido,edad,email,password){
+class Usuario {
+    constructor(nombre, apellido, edad, email, password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -10,11 +15,11 @@ class Usuario{
     }
 }
 
-let usuariosRegistrados = [ ];
+let usuariosRegistrados = [];
 
 const registro = document.getElementById("registro");
 
-registro.addEventListener("submit",(e)=>{
+registro.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
@@ -24,11 +29,37 @@ registro.addEventListener("submit",(e)=>{
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const usuarioNuevo = new Usuario(nombre,apellido,edad,email,password);
+    const usuarioNuevo = new Usuario(nombre, apellido, edad, email, password);
 
     usuariosRegistrados.push(usuarioNuevo);
 
-    console.log(usuariosRegistrados);
+    constJs = JSON.stringify(usuariosRegistrados);
+
+    for (const usuario of usuariosRegistrados) {
+        guardarLocalJs("usuario", constJs);
+        guardarLocalJs("usuario", constJs);
+    }
+
+    registro.remove()
+
+    let contenedor = document.getElementById("form-container");
+
+    let registroExitoso = document.createElement("div");
+
+    registroExitoso.innerHTML = `
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <h2 class="msj-exitoso m-5">¡Te has registrado exitosamente!</h2>
+                <img src="../images/registro-exito.png" alt="Cinnamonroll saludando" class="img-fluid reg-exitoso-img">
+                <a href="login.html" class="registro-exitoso-link mt-3">→ Para iniciar sesión has click aquí ←</a>
+            </div>
+        </div>
+    </div>
+    `
+    contenedor.appendChild(registroExitoso);
+
+    /* let loginInfo = JSON.parse(localStorage.getItem("usuario")); */
 });
 
 /*GET DE LOS INPUTS PARA VALIDACIONES*/
@@ -41,14 +72,14 @@ const inputPassword = document.getElementById('password');
 
 /* VALIDACION INPUT NOMBRE */
 
-inputNombre.addEventListener("blur",()=>{
+inputNombre.addEventListener("blur", () => {
 
-    if (inputNombre.value.length > 0){
+    if (inputNombre.value.length > 0) {
         let mensaje = document.getElementById("mensaje");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
         `
-    }else{
+    } else {
         let mensaje = document.getElementById("mensaje");
         mensaje.innerHTML = `
             <p class="error m-0">No puedes dejar este campo vacío.</p>
@@ -58,14 +89,14 @@ inputNombre.addEventListener("blur",()=>{
 
 /* VALIDACION INPUT APELLIDO */
 
-inputApellido.addEventListener("blur",()=>{
+inputApellido.addEventListener("blur", () => {
 
-    if (inputApellido.value.length > 0){
+    if (inputApellido.value.length > 0) {
         let mensaje = document.getElementById("mensaje-2");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
         `
-    }else{
+    } else {
         let mensaje = document.getElementById("mensaje-2");
         mensaje.innerHTML = `
             <p class="error m-0">No puedes dejar este campo vacío.</p>
@@ -75,8 +106,8 @@ inputApellido.addEventListener("blur",()=>{
 
 /* VALIDACION INPUT EDAD */
 
-inputEdad.addEventListener("blur",()=>{
-    
+inputEdad.addEventListener("blur", () => {
+
     function calcularEdad(fecha_nacimiento) {
         let hoy = new Date();
         let cumpleanos = new Date(fecha_nacimiento);
@@ -87,14 +118,14 @@ inputEdad.addEventListener("blur",()=>{
         }
         return edad;
     }
-    
+
     let edad = calcularEdad(inputEdad.value);
-    if(edad >= 18){
+    if (edad >= 18) {
         let mensaje = document.getElementById("mensaje-3");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
         `
-    }else{
+    } else {
         let mensaje = document.getElementById("mensaje-3");
         mensaje.innerHTML = `
             <p class="error m-0">Debes ser mayor de edad para registrarte.</p>
@@ -104,14 +135,14 @@ inputEdad.addEventListener("blur",()=>{
 
 /* VALIDACION INPUT EMAIL */
 
-inputEmail.addEventListener("blur",()=>{
+inputEmail.addEventListener("blur", () => {
 
-    if ((inputEmail.value.length > 0) && (inputEmail.value.includes("@")) && (inputEmail.value.includes("."))){
+    if ((inputEmail.value.length > 0) && (inputEmail.value.includes("@")) && (inputEmail.value.includes("."))) {
         let mensaje = document.getElementById("mensaje-4");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
         `
-    }else{
+    } else {
         let mensaje = document.getElementById("mensaje-4");
         mensaje.innerHTML = `
             <p class="error m-0">Tu email no es valido.</p>
@@ -121,18 +152,17 @@ inputEmail.addEventListener("blur",()=>{
 
 /* VALIDACION INPUT PASSWORD */
 
-inputPassword.addEventListener("blur",()=>{
+inputPassword.addEventListener("blur", () => {
 
-    if ((inputPassword.value.length > 0) && (inputPassword.value.match(/[0-9]/g))){
+    if ((inputPassword.value.length > 0) && (inputPassword.value.match(/[0-9]/g))) {
         let mensaje = document.getElementById("mensaje-5");
         mensaje.innerHTML = `
             <p class="valido m-0">✓</p>
         `
-    }else{
+    } else {
         let mensaje = document.getElementById("mensaje-5");
         mensaje.innerHTML = `
             <p class="error m-0">Dato incorrecto, intenta otra vez.</p>
         `
     }
 });
-

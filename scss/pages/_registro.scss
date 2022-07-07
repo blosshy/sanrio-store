@@ -30,3 +30,45 @@
     font-style: italic;
     color: green;
 }
+
+/* ESTILOS MENSAJE DE REGISTRO EXITOSO */
+
+.msj-exitoso{
+    color: rgb(211, 98, 117);
+    font-family:'Comfortaa', cursive;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+#form-container{
+    background-color: #FBD4E7;
+}
+
+.reg-exitoso-img{
+    padding: 3rem;
+}
+
+.registro-exitoso-link{
+    @extend .registro-link;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+@media screen and (min-width:0px) and (max-width:354px) {
+    .registro-exitoso-link{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:354px) and (max-width:437px) {
+    .registro-exitoso-link{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:438px) and (max-width:583px) {
+    .registro-exitoso-link{
+        font-size: 1.5rem;
+    }
+}
