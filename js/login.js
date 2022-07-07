@@ -18,10 +18,6 @@ login.addEventListener("submit",(e)=>{
 
     if ((logEmail === cuenta[0].email) && (logPassword === cuenta[0].password)) {
         window.location.href='../index.html';
-        /* let nombreUsuario = document.getElementById("nombre-usuario");
-        nombreUsuario.innerHTML = `
-            ${cuenta[0].nombre}
-        `  */
     }else if ((logEmail !== cuenta[0].email) && (logPassword === cuenta[0].password)){
         let mensaje = document.getElementById("error-p");
         mensaje.innerHTML = `
