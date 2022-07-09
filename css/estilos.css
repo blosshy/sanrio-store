@@ -607,6 +607,12 @@
   text-align: center;
   padding-top: 1rem; }
 
+.p-recomendaciones {
+  color: #d36275;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  font-size: 1rem; }
+
 #form-container {
   background-color: #FBD4E7; }
 

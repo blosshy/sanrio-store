@@ -29,7 +29,7 @@ class Usuario {
     }
 }
 
-/* ARRAY VACIO PARA GUARDAR LO QUE SE PUSHEE */
+/* ARRAY VACIO PARA GUARDAR LOS USUARIOS NUEVOS */
 
 let usuariosRegistrados = [];
 
@@ -64,9 +64,10 @@ registro.addEventListener("submit", (e) => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que has ingresado un dato incorrecto :(</h2>
+                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
+                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
                 <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo click aquí ←</a>
+                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
             </div>
         </div>
     </div>
@@ -83,9 +84,10 @@ registro.addEventListener("submit", (e) => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que has ingresado un dato incorrecto :(</h2>
+                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
+                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
                 <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo click aquí ←</a>
+                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
             </div>
         </div>
     </div>
@@ -102,9 +104,10 @@ registro.addEventListener("submit", (e) => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que has ingresado un dato incorrecto :(</h2>
+                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
+                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
                 <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo click aquí ←</a>
+                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
             </div>
         </div>
     </div>
@@ -121,7 +124,8 @@ registro.addEventListener("submit", (e) => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que has ingresado un dato incorrecto :(</h2>
+                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
+                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
                 <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
                 <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo click aquí ←</a>
             </div>
@@ -141,11 +145,8 @@ registro.addEventListener("submit", (e) => {
 
     usuariosRegistrados.push(usuarioNuevo);
 
-    constJs = JSON.stringify(usuariosRegistrados);
-
     for (const usuario of usuariosRegistrados) {
-        guardarLocalJs("usuario", constJs);
-        guardarLocalJs("usuario", constJs);
+        guardarLocalJs("usuario",JSON.stringify(usuario));
     }
 
     registro.remove()
@@ -159,6 +160,7 @@ registro.addEventListener("submit", (e) => {
         <div class="row">
             <div class="col-md-12 d-flex flex-column align-items-center">
                 <h2 class="msj-exitoso m-5">¡Te has registrado exitosamente!</h2>
+                <p class="p-recomendaciones">Revisa tu correo electrónico para verificar tu cuenta registrada.</p>
                 <img src="../images/registro-exito.png" alt="Cinnamonroll saludando" class="img-fluid reg-exitoso-img">
                 <a href="login.html" class="registro-exitoso-link mt-3">→ Para iniciar sesión has click aquí ←</a>
             </div>
@@ -166,8 +168,6 @@ registro.addEventListener("submit", (e) => {
     </div>
     `
     contenedor.appendChild(registroExitoso);
-
-     /* let loginInfo = JSON.parse(localStorage.getItem("usuario")); */
     }
 });
 

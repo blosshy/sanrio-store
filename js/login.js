@@ -1,11 +1,6 @@
-/* CUENTA CREADA */
-const cuenta = [{
-    email: 'emailfalso@gmail.com',
-    password: '12345',
-    nombre:`matias`
-}];
+let usuarioStorage = JSON.parse(localStorage.getItem("usuario"));
 
-/* FALSO LOGIN QUE REDIRECCIONA AL INICIO DE LA TIENDA */
+/*LOGIN QUE REDIRECCIONA AL INICIO DE LA TIENDA */
 
 const login = document.getElementById("login");
 
@@ -16,7 +11,26 @@ login.addEventListener("submit",(e)=>{
     const logEmail = document.getElementById("email-login").value;
     const logPassword = document.getElementById("password-login").value;
 
-    if ((logEmail === cuenta[0].email) && (logPassword === cuenta[0].password)) {
+    if ((usuarioStorage.some(elemento => elemento.email === logEmail)) && (usuarioStorage.some(elemento => elemento.password === logPassword))) {
+        window.location.href='../index.html';
+    }/* else if ((logEmail !== cuenta[0].email) && (logPassword === cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
+    }else if ((logEmail === cuenta[0].email) && (logPassword !== cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
+    }else if ((logEmail !== cuenta[0].email) && (logPassword !== cuenta[0].password)){
+        let mensaje = document.getElementById("error-p");
+        mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+        `
+    }  */
+
+    /* if ((logEmail === cuenta[0].email) && (logPassword === cuenta[0].password)) {
         window.location.href='../index.html';
     }else if ((logEmail !== cuenta[0].email) && (logPassword === cuenta[0].password)){
         let mensaje = document.getElementById("error-p");
@@ -33,7 +47,7 @@ login.addEventListener("submit",(e)=>{
         mensaje.innerHTML = `
             <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
         `
-    }
+    } */
 });
 
 /* GET DE LOS INPUTS DEL LOGIN */
