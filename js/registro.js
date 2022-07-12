@@ -142,7 +142,7 @@ registro.addEventListener("submit", (e) => {
     const password = document.getElementById('password').value;
 
     const usuarioNuevo = new Usuario(nombre, apellido, edad, email, password);
-
+    
     usuariosRegistrados.push(usuarioNuevo);
 
     for (const usuario of usuariosRegistrados) {

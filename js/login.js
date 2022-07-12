@@ -1,3 +1,5 @@
+/* VARIABLE QUE CONTIENE EL FORM TRAIDO POR ID */
+
 let usuarioStorage = JSON.parse(localStorage.getItem("usuario"));
 
 /*LOGIN QUE REDIRECCIONA AL INICIO DE LA TIENDA */
