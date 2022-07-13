@@ -1,13 +1,13 @@
 if (sessionStorage.getItem("sesion") == "true") {
     const navbar = document.getElementById("usuarioregistrado");
 
-    let usuarioStorage = JSON.parse(localStorage.getItem("usuario"));
+    let usuarioStorage = JSON.parse(sessionStorage.getItem("nombre de usuario"));
 
     navbar.innerHTML = `
     <div class="dropdown d-flex justify-content-center ms-4">
         <button class="btn dropdown-estilos dropdown-toggle" type="button"
             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            ${usuarioStorage.nombre}
+            ${usuarioStorage}
         </button>
         <ul class="dropdown-menu z-index" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item z-index" href="#">Mi carrito</a></li>

@@ -143,12 +143,18 @@ registro.addEventListener("submit", (e) => {
 
     const usuarioNuevo = new Usuario(nombre, apellido, edad, email, password);
     
-    usuariosRegistrados.push(usuarioNuevo);
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-    for (const usuario of usuariosRegistrados) {
-        guardarLocalJs("usuario",JSON.stringify(usuario));
+    if (!usuarios) {
+        usuariosRegistrados.push(usuarioNuevo);
+        localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados));
+        sessionStorage.setItem("nombre de usuario",JSON.stringify(usuarioNuevo.nombre));
+    }else{
+        usuarios.push(usuarioNuevo);
+        localStorage.setItem("usuarios",JSON.stringify(usuarios));
+        sessionStorage.setItem("nombre de usuario",JSON.stringify(usuarioNuevo.nombre));
     }
-
+    
     registro.remove()
 
     let contenedor = document.getElementById("form-container");

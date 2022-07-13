@@ -1,6 +1,8 @@
 /* VARIABLE QUE CONTIENE EL FORM TRAIDO POR ID */
 
-let usuarioStorage = JSON.parse(localStorage.getItem("usuario"));
+let usuarioStorage = JSON.parse(localStorage.getItem("usuarios"));
+
+console.log(usuarioStorage);
 
 /*LOGIN QUE REDIRECCIONA AL INICIO DE LA TIENDA */
 
@@ -12,27 +14,30 @@ login.addEventListener("submit", (e) => {
     const logEmail = document.getElementById("email-login").value;
     const logPassword = document.getElementById("password-login").value;
 
-    if ((usuarioStorage.email === logEmail) && (usuarioStorage.password === logPassword)) {
-        window.location.href = '../index.html';
-        sessionStorage.setItem("sesion", "true");
-    } else if ((usuarioStorage.email !== logEmail) && (usuarioStorage.password === logPassword)) {
-        let mensaje = document.getElementById("error-p");
-        mensaje.innerHTML = `
-        <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
-    `
-        sessionStorage.setItem("sesion", "false");
-    } else if ((usuarioStorage.email === logEmail) && (usuarioStorage.password !== logPassword)) {
-        let mensaje = document.getElementById("error-p");
-        mensaje.innerHTML = `
-        <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
-    `
-    } else if ((usuarioStorage.email !== logEmail) && (usuarioStorage.password !== logPassword)) {
-        let mensaje = document.getElementById("error-p");
-        mensaje.innerHTML = `
-        <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
-    `
-        sessionStorage.setItem("sesion", "false");
-    }
+    usuarioStorage.forEach(usuario => {
+        if ((usuarioStorage.some((elemento)=> elemento.email === logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
+            window.location.href = '../index.html';
+            sessionStorage.setItem("sesion", "true");
+        }else if ((usuarioStorage.some((elemento)=> elemento.email !== logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
+            let mensaje = document.getElementById("error-p");
+            mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+            `
+            sessionStorage.setItem("sesion", "false");
+        }else if ((usuarioStorage.some((elemento)=> elemento.email === logEmail)) && (usuarioStorage.some((elemento)=> elemento.password !== logPassword))){
+            let mensaje = document.getElementById("error-p");
+            mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+            `
+            sessionStorage.setItem("sesion", "false");
+        }else if ((usuarioStorage.some((elemento)=> elemento.email !== logEmail)) && (usuarioStorage.some((elemento)=> elemento.password !== logPassword))){
+            let mensaje = document.getElementById("error-p");
+            mensaje.innerHTML = `
+            <p class="error m-0">El email y/o contraseña ingresado es incorrecto.</p>
+            `
+            sessionStorage.setItem("sesion", "false");
+        }
+    });
 })
 
 /* GET DE LOS INPUTS DEL LOGIN */
