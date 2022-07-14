@@ -2,8 +2,6 @@
 
 let usuarioStorage = JSON.parse(localStorage.getItem("usuarios"));
 
-console.log(usuarioStorage);
-
 /*LOGIN QUE REDIRECCIONA AL INICIO DE LA TIENDA */
 
 const login = document.getElementById("login");

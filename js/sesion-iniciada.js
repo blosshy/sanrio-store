@@ -1,3 +1,5 @@
+/* BOTON MENU-DESPEGABLE EN EL INDEX LUEGO DE INCIAR SESION */
+
 if (sessionStorage.getItem("sesion") == "true") {
     const navbar = document.getElementById("usuarioregistrado");
 
