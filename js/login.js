@@ -11,8 +11,14 @@ login.addEventListener("submit", (e) => {
 
     const logEmail = document.getElementById("email-login").value;
     const logPassword = document.getElementById("password-login").value;
-
-    usuarioStorage.forEach(usuario => {
+    
+    if (usuarioStorage === null) {
+        let mensaje = document.getElementById("error-p");
+            mensaje.innerHTML = `
+            <p class="error m-0">Debe estar registrado para iniciar sesión.</p>
+            `
+    }else{
+        usuarioStorage.forEach(usuario => {
         if ((usuarioStorage.some((elemento)=> elemento.email === logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
             window.location.href = '../index.html';
             sessionStorage.setItem("sesion", "true");
@@ -36,6 +42,7 @@ login.addEventListener("submit", (e) => {
             sessionStorage.setItem("sesion", "false");
         }
     });
+    }
 })
 
 /* GET DE LOS INPUTS DEL LOGIN */
