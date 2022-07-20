@@ -576,10 +576,10 @@
   width: 4rem;
   height: 3rem; }
 
-.password-link, .registro-link, .registro-exitoso-link {
+.password-link, .registro-link {
   text-decoration: none;
   color: #d36275; }
-  .password-link:hover, .registro-link:hover, .registro-exitoso-link:hover {
+  .password-link:hover, .registro-link:hover {
     color: #8f8f8f; }
 
 .btn-login {
@@ -609,7 +609,7 @@
   .form-edad {
     width: 15rem; } }
 
-.registro-link, .registro-exitoso-link {
+.registro-link {
   font-weight: 700; }
 
 .error {
@@ -620,38 +620,24 @@
   font-style: italic;
   color: green; }
 
-/* ESTILOS MENSAJE DE REGISTRO EXITOSO */
-.msj-exitoso {
-  color: #d36275;
-  font-family: 'Comfortaa', cursive;
+/* ESTILOS MENSAJE DE SWEET ALERT */
+.swal-modal {
+  background-color: lightpink;
+  border: 3px solid white; }
+
+.swal-text {
   text-align: center;
-  padding-top: 1rem; }
+  color: white;
+  font-family: 'Comfortaa', cursive; }
 
-.p-recomendaciones {
-  color: #d36275;
-  font-family: 'Comfortaa', cursive;
-  text-align: center;
-  font-size: 1rem; }
+.swal-title {
+  color: white; }
 
-#form-container {
-  background-color: #FBD4E7; }
-
-.reg-exitoso-img {
-  padding: 3rem; }
-
-.registro-exitoso-link {
-  font-size: 2rem;
-  padding-bottom: 3rem;
-  text-align: center; }
-
-@media screen and (min-width: 0px) and (max-width: 354px) {
-  .registro-exitoso-link {
-    font-size: 1rem; } }
-
-@media screen and (min-width: 354px) and (max-width: 437px) {
-  .registro-exitoso-link {
-    font-size: 1.2rem; } }
-
-@media screen and (min-width: 438px) and (max-width: 583px) {
-  .registro-exitoso-link {
-    font-size: 1.5rem; } }
+.swal-button {
+  border-radius: 2px;
+  background-color: #d36275;
+  font-size: 12px;
+  border: 1px solid white;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3); }
+  .swal-button:hover {
+    background-color: lightpink !important; }

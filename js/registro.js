@@ -54,126 +54,66 @@ registro.addEventListener("submit", (e) => {
     let edadValidacion = calcularEdad(inputEdad.value);
 
     if ((inputNombre.value.length == 0) || (inputApellido.value.length == 0) || (inputEdad.value.length == 0) || (inputEmail.value.length == 0) || (inputPassword.value.length == 0)) {
-        registro.remove()
-
-        let contenedor = document.getElementById("form-container");
-
-        let registroExitoso = document.createElement("div");
-
-        registroExitoso.innerHTML = `
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
-                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
-                <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
-            </div>
-        </div>
-    </div>
-    `
-        contenedor.appendChild(registroExitoso);
+        swal({
+            title: "¡Oops!",
+            text: `Parece que has ingresado un dato incorrecto :( 
+                Por favor vuelve a intentarlo nuevamente.`,
+            icon: "../images/reg-fail.png",
+        });
     } else if (edadValidacion < 18) {
-        registro.remove()
-
-        let contenedor = document.getElementById("form-container");
-
-        let registroExitoso = document.createElement("div");
-
-        registroExitoso.innerHTML = `
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
-                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
-                <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
-            </div>
-        </div>
-    </div>
-    `
+        swal({
+            title: "¡Oops!",
+            text: `Parece que has ingresado un dato incorrecto :( 
+                Por favor vuelve a intentarlo nuevamente.`,
+            icon: "../images/reg-fail.png",
+        });
         contenedor.appendChild(registroExitoso);
     } else if ((!inputEmail.value.includes("@")) || (!inputEmail.value.includes("."))) {
-        registro.remove()
+        swal({
+            title: "¡Oops!",
+            text: `Parece que has ingresado un dato incorrecto :( 
+                Por favor vuelve a intentarlo nuevamente.`,
+            icon: "../images/reg-fail.png",
+        });
+    } else if (!inputPassword.value.match(/[0-9]/g)) {
+        swal({
+            title: "¡Oops!",
+            text: `Parece que has ingresado un dato incorrecto :( 
+                Por favor vuelve a intentarlo nuevamente.`,
+            icon: "../images/reg-fail.png",
+        });
+    } else {
 
-        let contenedor = document.getElementById("form-container");
+        const nombre = document.getElementById('nombre').value;
+        const apellido = document.getElementById('apellido').value;
+        const edad = document.getElementById('edad').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
 
-        let registroExitoso = document.createElement("div");
+        const usuarioNuevo = new Usuario(nombre, apellido, edad, email, password);
 
-        registroExitoso.innerHTML = `
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
-                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
-                <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo has click aquí ←</a>
-            </div>
-        </div>
-    </div>
-    `
-        contenedor.appendChild(registroExitoso);
-    }else if (!inputPassword.value.match(/[0-9]/g)) {
-        registro.remove()
+        let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-        let contenedor = document.getElementById("form-container");
+        if (!usuarios) {
+            usuariosRegistrados.push(usuarioNuevo);
+            localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
+            sessionStorage.setItem("nombre de usuario", JSON.stringify(usuarioNuevo.nombre));
+        } else {
+            usuarios.push(usuarioNuevo);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            sessionStorage.setItem("nombre de usuario", JSON.stringify(usuarioNuevo.nombre));
+        }
 
-        let registroExitoso = document.createElement("div");
-
-        registroExitoso.innerHTML = `
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Oops! Parece que ha ocurrido un error en el registro :(</h2>
-                <p class="p-recomendaciones">Recuerda evitar dejar campos vacíos y asegurarte de poner la información correcta en cada uno de ellos.</p>
-                <img src="../images/reg-fail.png" alt="Melody dudando" class="img-fluid reg-exitoso-img">
-                <a href="registro.html" class="registro-exitoso-link mt-3">→ Para volver a intentarlo click aquí ←</a>
-            </div>
-        </div>
-    </div>
-    `
-        contenedor.appendChild(registroExitoso);
-    }else{
-
-    const nombre = document.getElementById('nombre').value;
-    const apellido = document.getElementById('apellido').value;
-    const edad = document.getElementById('edad').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    const usuarioNuevo = new Usuario(nombre, apellido, edad, email, password);
-    
-    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
-
-    if (!usuarios) {
-        usuariosRegistrados.push(usuarioNuevo);
-        localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados));
-        sessionStorage.setItem("nombre de usuario",JSON.stringify(usuarioNuevo.nombre));
-    }else{
-        usuarios.push(usuarioNuevo);
-        localStorage.setItem("usuarios",JSON.stringify(usuarios));
-        sessionStorage.setItem("nombre de usuario",JSON.stringify(usuarioNuevo.nombre));
-    }
-    
-    registro.remove()
-
-    let contenedor = document.getElementById("form-container");
-
-    let registroExitoso = document.createElement("div");
-
-    registroExitoso.innerHTML = `
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <h2 class="msj-exitoso m-5">¡Te has registrado exitosamente!</h2>
-                <p class="p-recomendaciones">Revisa tu correo electrónico para verificar tu cuenta registrada.</p>
-                <img src="../images/registro-exito.png" alt="Cinnamonroll saludando" class="img-fluid reg-exitoso-img">
-                <a href="login.html" class="registro-exitoso-link mt-3">→ Para iniciar sesión has click aquí ←</a>
-            </div>
-        </div>
-    </div>
-    `
-    contenedor.appendChild(registroExitoso);
+        swal({
+            title: "¡Bienvenido!",
+            text: `Te has registrado correctamente 
+            A continuacion recibiras un correo electronico para verificar tu cuenta.`,
+            icon: "../images/registro-exito.png",
+        }).then(res => {
+            if(res){
+                window.location.href = '../pages/login.html';
+            }
+        });
     }
 });
 
