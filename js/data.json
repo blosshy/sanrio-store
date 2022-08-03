@@ -2,36 +2,36 @@
     {
         "id": 1,
         "nombre": "Buzo Crop Top Kuromi",
-        "img": "../images/kuromicrop1.jpg",
+        "img": "images/kuromicrop1.jpg",
         "alt": "Kuromi Crop top ropa",
-        "imghover":"../images/kuromicrop2.jpg",
+        "imghover":"images/kuromicrop2.jpg",
         "precio": 8354,
         "cantidad":1
     },
     {
         "id": 2,
         "nombre": "Buzo Crop Top Cinnamonroll",
-        "img": "../images/cinnamonrollcrop1.jpg",
+        "img": "images/cinnamonrollcrop1.jpg",
         "alt": "Cinnamoroll Crop top ropa",
-        "imghover":"../images/cinnamonrollcrop2.jpg",
+        "imghover":"images/cinnamonrollcrop2.jpg",
         "precio": 8354,
         "cantidad":1
     },
     {
         "id": 3,
         "nombre": "Buzo Crop Top Melody",
-        "img": "../images/melodycrop1.jpg",
+        "img": "images/melodycrop1.jpg",
         "alt": "My Melody Crop top ropa",
-        "imghover":"../images/melodycrop2.jpg",
+        "imghover":"images/melodycrop2.jpg",
         "precio": 8354,
         "cantidad":1
     },
     {
         "id": 4,
         "nombre": "Buzo Crop Top Hello Kitty",
-        "img": "../images/hellokittycrop1.jpg",
+        "img": "images/hellokittycrop1.jpg",
         "alt": "Hello Kitty Crop top ropa",
-        "imghover":"../images/hellokittycrop2.jpg",
+        "imghover":"images/hellokittycrop2.jpg",
         "precio": 8354,
         "cantidad":1
     }
