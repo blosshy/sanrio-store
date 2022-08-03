@@ -15,13 +15,22 @@ login.addEventListener("submit", (e) => {
     if (usuarioStorage === null) {
         let mensaje = document.getElementById("error-p");
             mensaje.innerHTML = `
-            <p class="error m-0">Debe estar registrado para iniciar sesión.</p>
+            <p class="error m-0">Debes estar registrado para iniciar sesión.</p>
             `
     }else{
         usuarioStorage.forEach(usuario => {
         if ((usuarioStorage.some((elemento)=> elemento.email === logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
-            window.location.href = '../index.html';
-            sessionStorage.setItem("sesion", "true");
+            swal({
+                title: "¡Bienvenido a Sanrio Store Argentina!",
+                text: `Has iniciado sesión correctamente. 
+                Gracias por confiar en nosotros, ¡Felices compras!.`,
+                icon: "../images/inicio-exitoso.png",
+            }).then(res => {
+                if(res){
+                    window.location.href = '../index.html';
+                    sessionStorage.setItem("sesion", "true");
+                }
+            });
         }else if ((usuarioStorage.some((elemento)=> elemento.email !== logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
             let mensaje = document.getElementById("error-p");
             mensaje.innerHTML = `

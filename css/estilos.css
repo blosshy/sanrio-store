@@ -631,7 +631,8 @@
   font-family: 'Comfortaa', cursive; }
 
 .swal-title {
-  color: white; }
+  color: #c0465a;
+  font-family: 'Comfortaa', cursive; }
 
 .swal-button {
   border-radius: 2px;
