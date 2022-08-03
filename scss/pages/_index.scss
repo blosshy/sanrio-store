@@ -264,22 +264,15 @@
 }
 
 .link-precio{
-    text-decoration: none;
     color: black;
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
-    padding-right: 1rem;
-    border-right: 1px solid black;
-    &:hover{
-        color: black;
-    }
+    padding-bottom: 1rem;
 }
 
 .link-carrito{
     @extend .link-precio;
     border-right: none;
-    padding-right: 0px;
-    padding-left: 10px;
     }
 
 .links-boton{

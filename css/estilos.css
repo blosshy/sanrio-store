@@ -200,19 +200,13 @@
     background-color: pink; }
 
 .link-precio, .link-carrito {
-  text-decoration: none;
   color: black;
   font-family: 'Comfortaa', cursive;
   font-weight: 500;
-  padding-right: 1rem;
-  border-right: 1px solid black; }
-  .link-precio:hover, .link-carrito:hover {
-    color: black; }
+  padding-bottom: 1rem; }
 
 .link-carrito {
-  border-right: none;
-  padding-right: 0px;
-  padding-left: 10px; }
+  border-right: none; }
 
 .links-boton {
   text-decoration: none; }
