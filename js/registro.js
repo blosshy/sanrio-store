@@ -67,7 +67,6 @@ registro.addEventListener("submit", (e) => {
                 Por favor vuelve a intentarlo nuevamente.`,
             icon: "../images/reg-fail.png",
         });
-        contenedor.appendChild(registroExitoso);
     } else if ((!inputEmail.value.includes("@")) || (!inputEmail.value.includes("."))) {
         swal({
             title: "¡Oops!",
@@ -123,84 +122,41 @@ registro.addEventListener("submit", (e) => {
 /* VALIDACION INPUT NOMBRE */
 
 inputNombre.addEventListener("blur", () => {
-
-    if (inputNombre.value.length > 0) {
-        let mensaje = document.getElementById("mensaje");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("mensaje");
-        mensaje.innerHTML = `
-            <p class="error m-0">No puedes dejar este campo vacío.</p>
-        `
-    }
+    let mensaje = document.getElementById("mensaje");
+    
+    inputNombre.value.length > 0 ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `<p class="error m-0">No puedes dejar este campo vacío.</p>`;
 });
 
 /* VALIDACION INPUT APELLIDO */
-
+    
 inputApellido.addEventListener("blur", () => {
+    let mensaje = document.getElementById("mensaje-2");
 
-    if (inputApellido.value.length > 0) {
-        let mensaje = document.getElementById("mensaje-2");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("mensaje-2");
-        mensaje.innerHTML = `
-            <p class="error m-0">No puedes dejar este campo vacío.</p>
-        `
-    }
+    inputApellido.value.length > 0 ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `<p class="error m-0">No puedes dejar este campo vacío.</p>`;
 });
 
 /* VALIDACION INPUT EDAD */
 
 inputEdad.addEventListener("blur", () => {
     let edad = calcularEdad(inputEdad.value);
-    if (edad >= 18) {
-        let mensaje = document.getElementById("mensaje-3");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("mensaje-3");
-        mensaje.innerHTML = `
-            <p class="error m-0">Debes ser mayor de edad para registrarte.</p>
-        `
-    }
+    let mensaje = document.getElementById("mensaje-3");
+
+    edad >= 18 ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `<p class="error m-0">Debes ser mayor de edad para registrarte.</p>`;
 });
 
 /* VALIDACION INPUT EMAIL */
 
 inputEmail.addEventListener("blur", () => {
+    let mensaje = document.getElementById("mensaje-4");
 
-    if ((inputEmail.value.length > 0) && (inputEmail.value.includes("@")) && (inputEmail.value.includes("."))) {
-        let mensaje = document.getElementById("mensaje-4");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("mensaje-4");
-        mensaje.innerHTML = `
-            <p class="error m-0">Tu email no es valido.</p>
-        `
-    }
+    inputEmail.value.length > 0 && inputEmail.value.includes("@") && inputEmail.value.includes(".") ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `
+    <p class="error m-0">Tu email no es valido.</p>`;
 });
 
 /* VALIDACION INPUT PASSWORD */
 
 inputPassword.addEventListener("blur", () => {
-
-    if ((inputPassword.value.length > 0) && (inputPassword.value.match(/[0-9]/g))) {
-        let mensaje = document.getElementById("mensaje-5");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("mensaje-5");
-        mensaje.innerHTML = `
-            <p class="error m-0">Dato incorrecto, intenta otra vez.</p>
-        `
-    }
+    let mensaje = document.getElementById("mensaje-5");
+    
+    inputPassword.value.length > 0 && inputPassword.value.match(/[0-9]/g) ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `<p class="error m-0">Dato incorrecto, intenta otra vez.</p>`;
 });

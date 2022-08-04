@@ -1,4 +1,4 @@
-/* VARIABLE QUE CONTIENE EL FORM TRAIDO POR ID */
+/* VARIABLE QUE CONTIENE EL USUARIO TRAIDO DE STORAGE */
 
 let usuarioStorage = JSON.parse(localStorage.getItem("usuarios"));
 
@@ -59,36 +59,19 @@ login.addEventListener("submit", (e) => {
 const logEmail = document.getElementById("email-login");
 const logPassword = document.getElementById("password-login");
 
-/* VALIDACION INPUT EMAIL */
+/* VALIDACION BLUR INPUT EMAIL */
 
 logEmail.addEventListener("blur", () => {
+    let mensaje = document.getElementById("error-m");
 
-    if ((logEmail.value.length > 0) && (logEmail.value.includes("@")) && (logEmail.value.includes("."))) {
-        let mensaje = document.getElementById("error-m");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("error-m");
-        mensaje.innerHTML = `
-            <p class="error m-0">No puedes dejar este campo vacío.</p>
-        `
-    }
+    logEmail.value.length > 0 && logEmail.value.includes("@") && logEmail.value.includes(".") ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `
+    <p class="error m-0">El dato ingresado es incorrecto.</p>`; 
 });
 
-/* VALIDACION INPUT PASSWORD */
+/* VALIDACION BLUR INPUT PASSWORD */
 
 logPassword.addEventListener("blur", () => {
+    let mensaje = document.getElementById("error-p");
 
-    if ((logPassword.value.length > 0) && (logPassword.value.match(/[0-9]/g))) {
-        let mensaje = document.getElementById("error-p");
-        mensaje.innerHTML = `
-            <p class="valido m-0">✓</p>
-        `
-    } else {
-        let mensaje = document.getElementById("error-p");
-        mensaje.innerHTML = `
-            <p class="error m-0">Dato incorrecto, intenta otra vez.</p>
-        `
-    }
+    logPassword.value.length > 0 && logPassword.value.match(/[0-9]/g) ? mensaje.innerHTML = `<p class="valido m-0">✓</p>` : mensaje.innerHTML = `<p class="error m-0">Dato incorrecto, intenta otra vez.</p>`;
 });
