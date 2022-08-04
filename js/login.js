@@ -29,6 +29,7 @@ login.addEventListener("submit", (e) => {
                 if(res){
                     window.location.href = '../index.html';
                     sessionStorage.setItem("sesion", "true");
+                    sessionStorage.setItem("nombre de usuario", JSON.stringify(usuario.nombre));
                 }
             });
         }else if ((usuarioStorage.some((elemento)=> elemento.email !== logEmail)) && (usuarioStorage.some((elemento)=> elemento.password === logPassword))){
