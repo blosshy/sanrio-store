@@ -47,10 +47,31 @@
                                 </form>
                                 <br>
                                 <div id="usuarioregistrado" class="d-flex justify-content-center">
-                                    <a href="./pages/login.html" class="texto-link">Cuenta<img src="images/user.png" alt="Usuario icono"
-                                        class="icons-nav"></a>
-                                <a href="#" class="texto-link">Carrito<img src="images/bag.png" alt="Carrito icono"
-                                        class="icons-nav"></a>
+                                    <a href="./pages/login.html" class="texto-link">Cuenta<img src="images/user.png"
+                                            alt="Usuario icono" class="icons-nav"></a>
+                                    <a href="#" class="texto-link" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">Carrito<img src="images/bag.png"
+                                            alt="Carrito icono" class="icons-nav"></a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="footer-titulo" id="exampleModalLabel">Carrito de compras
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body" id="modalcontainer"></div>
+                                                <div class="modal-footer">
+                                                    <p class="pe-3 precio-total" id="precioTotal">Precio total: 0$</p>
+                                                    <button type="button" class="boton-newsl"
+                                                        data-bs-dismiss="modal">Comprar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -155,9 +176,9 @@
                         <div class="swiper mySwiper mt-3">
                             <div class="swiper-wrapper" id="swiper-container">
                             </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -273,6 +294,7 @@
     <script src="./js/sesion-iniciada.js"></script>
     <script src="./js/app.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
+    <script src="./js/carritoDeCompras.js" type="module"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {

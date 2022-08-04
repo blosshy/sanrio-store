@@ -257,6 +257,7 @@
     padding: 1rem;
     border: 1px black solid;
     background-color: white;
+    font-family: 'Comfortaa', cursive;
 
     &:hover{
         background-color: pink;
@@ -269,16 +270,6 @@
     font-weight: 500;
     padding-bottom: 1rem;
 }
-
-.link-carrito{
-    @extend .link-precio;
-    border-right: none;
-    }
-
-.links-boton{
-    text-decoration: none;
-}
-
 
 .swiper-slide {
     text-align: center;

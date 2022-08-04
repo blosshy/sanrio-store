@@ -195,21 +195,16 @@
 .boton-card {
   padding: 1rem;
   border: 1px black solid;
-  background-color: white; }
+  background-color: white;
+  font-family: 'Comfortaa', cursive; }
   .boton-card:hover {
     background-color: pink; }
 
-.link-precio, .link-carrito {
+.link-precio {
   color: black;
   font-family: 'Comfortaa', cursive;
   font-weight: 500;
   padding-bottom: 1rem; }
-
-.link-carrito {
-  border-right: none; }
-
-.links-boton {
-  text-decoration: none; }
 
 .swiper-slide {
   text-align: center;
@@ -528,6 +523,31 @@
   background-image: url(../images/footer-fondo.jpg);
   padding: 5rem;
   margin-top: 1rem; }
+
+.img-modal {
+  height: 10rem;
+  width: 10rem; }
+
+.titulo-modal {
+  color: #c0465a;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1rem; }
+
+.texto-modal {
+  color: #f595a3; }
+
+.boton-eliminar {
+  width: 2rem;
+  border: 1px white solid;
+  border-radius: 0.375rem;
+  background-color: #e75a5a;
+  color: white; }
+  .boton-eliminar:hover {
+    background-color: red; }
+
+.precio-total {
+  color: black;
+  font-weight: 600; }
 
 .fondo-login {
   background-image: url(../images/login-fondo.png);

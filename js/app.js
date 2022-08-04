@@ -1,6 +1,7 @@
 /* FUNCION QUE RENDERIZA LOS PRODUCTOS DESTACADOS */
+import { carritoIndex } from "./carritoDeCompras.js"; 
 
-export const renderizarProductos = async (productos) =>{
+export const renderizarProductos = async (productos) => {
     productos.forEach(producto => {
         const contenedor = document.getElementById("swiper-container")
         let card = document.createElement("div")
@@ -17,14 +18,15 @@ export const renderizarProductos = async (productos) =>{
             <p class="product-name mt-3">${producto.nombre}</p>
             <span class="link-precio">$${producto.precio}</span>
             <div class="pb-3">
-                <a href="#" class="links-boton">
-                    <div class="boton-card">
-                        <span class="link-carrito">Añadir al carro</span>
-                    </div>
-                </a>
+                <button class="boton-card" id="boton${producto.id}">Añadir al carro</button>
             </div> 
         `)
-
+        
         contenedor.appendChild(card);
+
+        let boton = document.getElementById(`boton${producto.id}`);
+        boton.addEventListener("click", () => {
+            carritoIndex(producto.id);
+        });
     });
-}
+};
