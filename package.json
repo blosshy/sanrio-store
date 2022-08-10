@@ -1,7 +1,6 @@
 {
   "name": "sanrio-store",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +20,7 @@
   "homepage": "https://github.com/blosshy/sanrio-store#readme",
   "dependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
-  }
+    "nodemon": "^2.0.19"
+  },
+  "description": ""
 }

@@ -19,12 +19,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-    <meta name="keywords" content="sanrio,sanrio tienda argentina,sanrio argentina,productos sanrio en argentina,ropa de sanrio, accesorios de sanrio,peluches de sanrio,">
-    <meta name="description" content="¿Buscas productos de Sanrio en Argentina? ¡En Sanrio Store Argentina encontrarás todo lo que buscas! Compra desde peluches a ropa de Sanrio oficiales aquí.">
+    <meta name="keywords"
+        content="sanrio,sanrio tienda argentina,sanrio argentina,productos sanrio en argentina,ropa de sanrio, accesorios de sanrio,peluches de sanrio,">
+    <meta name="description"
+        content="¿Buscas productos de Sanrio en Argentina? ¡En Sanrio Store Argentina encontrarás todo lo que buscas! Compra desde peluches a ropa de Sanrio oficiales aquí.">
 </head>
 
 <body>
-    <header class="container-fluid padding-0">
+    <header class="container-fluid">
         <div class="row">
             <div class="col-md-12 padding-0">
                 <nav class="navbar navbar-expand-lg nav-fondo">
@@ -44,10 +46,33 @@
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </form>
                                 <br>
-                                <a href="./pages/login.html" class="texto-link"><span id="nombre-usuario">Cuenta</span><img src="images/user.png" alt="Usuario icono"
-                                        class="icons-nav"></a>
-                                <a href="#" class="texto-link">Carrito<img src="images/bag.png" alt="Carrito icono"
-                                        class="icons-nav"></a>
+                                <div id="usuarioregistrado" class="d-flex justify-content-center">
+                                    <a href="./pages/login.html" class="texto-link">Cuenta<img src="images/user.png"
+                                            alt="Usuario icono" class="icons-nav"></a>
+                                    <a href="#" class="texto-link" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">Carrito<img src="images/bag.png"
+                                            alt="Carrito icono" class="icons-nav"></a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="footer-titulo" id="exampleModalLabel">Carrito de compras
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body" id="modalcontainer"></div>
+                                                <div class="modal-footer">
+                                                    <p class="pe-3 precio-total" id="precioTotal">Precio total: 0$</p>
+                                                    <button type="button" class="boton-newsl"
+                                                        data-bs-dismiss="modal">Comprar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +87,7 @@
         </div>
     </header>
 
-    <section class="container-fluid">
+    <section class="container-fluid z2">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 d-flex flex-column justify-content-center align-items-center fondo">
                 <img src="images/logo2.png" alt="Hellokitty logo moño rosa" class="logo img-fluid">
@@ -149,75 +174,7 @@
                     <div class="col-md-12">
                         <!-- Swiper -->
                         <div class="swiper mySwiper mt-3">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide d-flex flex-column justify-content-center">
-                                    <div class="img-card-container">
-                                        <img src="./images/mymelody-newtop.jpg" alt="My Melody Crop top ropa"
-                                            class="img-fluid card-size-img img-before">
-                                        <img src="./images/mymelody-newtop-hover.jpg" alt="My Melody Crop top ropa"
-                                            class="img-fluid card-size-img img-after">
-                                    </div>
-                                    <p class="product-name mt-3">My Melody JapanLA Cropped Spirit Jersey</p>
-                                    <div class="pb-3">
-                                        <a href="#" class="links-boton">
-                                            <div class="boton-card">
-                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
-                                                    al carro</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide d-flex flex-column justify-content-center">
-                                    <div class="img-card-container">
-                                        <img src="./images/pompompurincrop1.jpg" alt="Pompompurin Crop top ropa"
-                                            class="img-fluid card-size-img img-before">
-                                        <img src="./images/pompompurincrop2.jpg" alt="Pompompurin Crop top ropa"
-                                            class="img-fluid card-size-img img-after">
-                                    </div>
-                                    <p class="product-name mt-3">Pompompurin JapanLA Cropped Spirit Jersey</p>
-                                    <div class="pb-3">
-                                        <a href="#" class="links-boton">
-                                            <div class="boton-card">
-                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
-                                                    al carro</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide d-flex flex-column justify-content-center">
-                                    <div class="img-card-container">
-                                        <img src="./images/cinnamorollcrop1.jpg" alt="Cinnamoroll Crop top ropa"
-                                            class="img-fluid card-size-img img-before">
-                                        <img src="./images/cinnamorollcrop2.jpg" alt="Cinnamoroll Crop top ropa"
-                                            class="img-fluid card-size-img img-after">
-                                    </div>
-                                    <p class="product-name mt-3">Cinnamoroll JapanLA Cropped Spirit Jersey</p>
-                                    <div class="pb-3">
-                                        <a href="#" class="links-boton">
-                                            <div class="boton-card">
-                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
-                                                    al carro</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide d-flex flex-column justify-content-center">
-                                    <div class="img-card-container">
-                                        <img src="./images/kuromicrop1.jpg" alt="Kuromi Crop top ropa"
-                                            class="img-fluid card-size-img img-before">
-                                        <img src="./images/kuromicrop2.jpg" alt="Kuromi Crop top ropa"
-                                            class="img-fluid card-size-img img-after">
-                                    </div>
-                                    <p class="product-name mt-3">Kuromi JapanLA Cropped Spirit Jersey</p>
-                                    <div class="pb-3">
-                                        <a href="#" class="links-boton">
-                                            <div class="boton-card">
-                                                <span class="link-precio">$8354</span> <span class="link-carrito">Añadir
-                                                    al carro</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="swiper-wrapper" id="swiper-container">
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -232,7 +189,8 @@
         <section class="container mb-2">
             <div class="row m-5">
                 <div class="col-md-4 p-3 d-flex justify-content-center flex-column align-items-center">
-                    <a href="#"><img src="./images/ropa.jpg" alt="Sanrio productos: ropa" class="img-fluid sub-indice-img"></a>
+                    <a href="#"><img src="./images/ropa.jpg" alt="Sanrio productos: ropa"
+                            class="img-fluid sub-indice-img"></a>
                     <a href="#" class="p-2 sub-indice">• Ropa •</a>
                 </div>
                 <div class="col-md-4 p-3 d-flex justify-content-center flex-column align-items-center">
@@ -279,7 +237,9 @@
                 <div class="row footer-list-mobile">
                     <div class="col-md-4 mt-3">
                         <ul class="icons-list d-flex flex-column align-items-center ps-0">
-                            <li class="footer-titulo"><h3>• Tienda •</h3></li>
+                            <li class="footer-titulo">
+                                <h3>• Tienda •</h3>
+                            </li>
                             <li class="pb-1"><a href="#" class="footer-link">Ropa</a></li>
                             <li class="pb-1"><a href="#" class="footer-link">Accesorios</a></li>
                             <li class="pb-1"><a href="#" class="footer-link">Peluches</a></li>
@@ -287,7 +247,9 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <ul class="icons-list d-flex flex-column align-items-center ps-0">
-                            <li class="footer-titulo"><h3 href="#">• Sobre nosotros •</h3></li>
+                            <li class="footer-titulo">
+                                <h3 href="#">• Sobre nosotros •</h3>
+                            </li>
                             <li class="pb-1"><a href="#" class="footer-link">¿Quienes somos?</a></li>
                             <li class="pb-1"><a href="#" class="footer-link">Preguntas frecuentes</a></li>
                             <li class="pb-1"><a href="#" class="footer-link">Copyright y derechos</a></li>
@@ -296,20 +258,30 @@
                         </ul>
                     </div>
                     <div class="col-md-4">
-                            <ul class="d-flex flex-row justify-content-center icons-list mt-3 p-0">
-                            <li><a href="#" title="Whatsapp"><img src="./images/whatsapp-icon.png" alt="Sanrio en Whatsapp" class="icons-socialmedia p-0 m-2"></a></li>
-                            <li><a href="#" title="Instagram"><img src="./images/instagram-icon.png" alt="Sanrio en Instagram" class="icons-socialmedia p-0 m-2"></a></li>
-                            <li><a href="#" title="Facebook"><img src="./images/facebook-icon.png" alt="Sanrio en Facebook" class="icons-socialmedia p-0 m-2"></a></li>
-                            <li><a href="#" title="Pinterest"><img src="./images/pinterest-icon.png" alt="Sanrio en Pinterest" class="icons-socialmedia p-0 m-2"></a></li>
-                            <li><a href="#" title="Tiktok"><img src="./images/tiktok-icon.png" alt="Sanrio en Tiktok" class="icons-socialmedia p-0 m-2"></a></li>
-                            </ul>
-                            <ul class="d-flex flex-row justify-content-center icons-list mt-3 mb-3 p-0">
-                                <li><img src="./images/mercadopago.png" alt="MercadoPago como metodo de pago" class="payment-icons p-0 m-1"></li>
-                                <li><img src="./images/mastercard.png" alt="Mastercad como metodo de pago" class="payment-icons p-0 m-1"></li>
-                                <li><img src="./images/visa.png" alt="Visa como metodo de pago" class="payment-icons p-0 m-1"></li>
-                                <li><img src="./images/applepay.png" alt="ApplePay como metodo de pago" class="payment-icons p-0 m-1"></li>
-                            </ul>
-                            <p class="text-center">© 2022 SANRIO CO., LTD. <b class="pink">Todos los derechos reservados.</b></p>
+                        <ul class="d-flex flex-row justify-content-center icons-list mt-3 p-0">
+                            <li><a href="#" title="Whatsapp"><img src="./images/whatsapp-icon.png"
+                                        alt="Sanrio en Whatsapp" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#" title="Instagram"><img src="./images/instagram-icon.png"
+                                        alt="Sanrio en Instagram" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#" title="Facebook"><img src="./images/facebook-icon.png"
+                                        alt="Sanrio en Facebook" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#" title="Pinterest"><img src="./images/pinterest-icon.png"
+                                        alt="Sanrio en Pinterest" class="icons-socialmedia p-0 m-2"></a></li>
+                            <li><a href="#" title="Tiktok"><img src="./images/tiktok-icon.png" alt="Sanrio en Tiktok"
+                                        class="icons-socialmedia p-0 m-2"></a></li>
+                        </ul>
+                        <ul class="d-flex flex-row justify-content-center icons-list mt-3 mb-3 p-0">
+                            <li><img src="./images/mercadopago.png" alt="MercadoPago como metodo de pago"
+                                    class="payment-icons p-0 m-1"></li>
+                            <li><img src="./images/mastercard.png" alt="Mastercad como metodo de pago"
+                                    class="payment-icons p-0 m-1"></li>
+                            <li><img src="./images/visa.png" alt="Visa como metodo de pago"
+                                    class="payment-icons p-0 m-1"></li>
+                            <li><img src="./images/applepay.png" alt="ApplePay como metodo de pago"
+                                    class="payment-icons p-0 m-1"></li>
+                        </ul>
+                        <p class="text-center">© 2022 SANRIO CO., LTD. <b class="pink">Todos los derechos
+                                reservados.</b></p>
                     </div>
                 </div>
             </section>
@@ -319,8 +291,10 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/sesion-iniciada.js"></script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/carritoDeCompras.js" type="module"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {

@@ -30,3 +30,33 @@
     font-style: italic;
     color: green;
 }
+
+/* ESTILOS MENSAJE DE SWEET ALERT */
+
+.swal-modal {
+    background-color: lightpink;
+    border: 3px solid white;
+}
+
+.swal-text {
+    text-align: center;
+    color: white;
+    font-family:'Comfortaa', cursive;
+}
+
+.swal-title {
+    color: rgb(192, 70, 90);
+    font-family:'Comfortaa', cursive;
+}
+
+.swal-button {
+    border-radius: 2px;
+    background-color: rgb(211, 98, 117);;
+    font-size: 12px;
+    border: 1px solid white;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+
+    &:hover{
+        background-color: lightpink!important;
+    }
+}
